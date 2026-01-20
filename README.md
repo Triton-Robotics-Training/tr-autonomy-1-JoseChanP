@@ -118,8 +118,8 @@ Create a node (the code is set up for you in `spin_sol.cpp` and `spin_sol.h`) th
 https://github.com/Triton-Robotics-Training/TR-CV-1/assets/33632547/c09eebcf-4f47-490b-9f65-17ddb58e281f
 
 ### __Before you write code__ setup a proper LSP
- 
-follow [this guide](https://github.com/Triton-Robotics/TR-Autonomy/blob/main/.md/clangd_setup.md) to setup clangd. This has significantly better performance than the microsoft C/C++ intellisense extension. Doing this is highly recommended
+
+follow [this guide](https://github.com/Triton-Robotics/TR-Autonomy/blob/main/.md/cpp_python_lsp_setup.md) to setup clangd. This has significantly better performance than the microsoft C/C++ intellisense extension. Doing this is highly recommended
 
 __If you cannot access that guide / the main TR-Autonomy repo please yell at your nearest autonomy lead to add you to the github : )__ 
 
