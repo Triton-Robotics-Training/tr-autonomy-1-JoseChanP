@@ -9,7 +9,9 @@ class SlowSolution : public rclcpp::Node {
  public:
   SlowSolution();
  private:
-  // your code here
+  void topic_callback(const ArrayMsg::SharedPtr msg);
+  rclcpp::Subscription<ArrayMsg>::SharedPtr subscription_;
+  rclcpp::Publisher<ArrayMsg>::SharedPtr publisher_;
 };
 
 #endif //YOUR_SOLUTION_SRC_SPIN_SLOW_UPDATE_H_

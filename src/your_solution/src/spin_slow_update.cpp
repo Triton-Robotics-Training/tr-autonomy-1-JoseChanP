@@ -7,9 +7,14 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-SlowSolution::SlowSolution() : Node("slowsolution") {
-  RCLCPP_INFO(this->get_logger(), "Remove this statement from spin_slow_update.cpp");
-  // your code here
-}
 
-// your code here
+SlowSolution::SlowSolution() : Node("slowsolution") {
+  subscription_ = this->create_subscription<ArrayMsg>("measuredpos", 10, std::bind(&SlowSolution::topic_callback, this,std::placeholders::_1));
+  publisher_ =this->create_publisher<ArrayMsg>("predictedpos", 10);
+}  
+  // your code here
+void SlowSolution::topic_callback(const ArrayMsg::SharedPtr msg){
+  ArrayMsg predicted_pos;
+  predicted_pos.data = msg->data;
+  publisher_->publish(predicted_pos);
+}
